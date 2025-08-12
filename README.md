@@ -1,30 +1,87 @@
-#Visual Regression Tracker
-Visual Regression Tracker(VRT) Prerequisites:
-Docker Desktop
-WSL(if working on corporate devices and want to do it for your own)
-IntelliJ
+# ⚙️ Visual Regression Tracker
+
+## Prerequisites
+
+Before starting, ensure you have the following installed:
+
+- Docker Desktop  
+- WSL (if working on corporate devices and want to run locally)  
+- IntelliJ (or your preferred IDE)
+
+---
+
+## Step 1: Set Up the Project Directory
+
+Create any folder on your desktop and paste the provided `docker-compose.yml` and `.env` file into this directory.
+
+![FolderImage](GitImages/1.PNG)
+
+---
+
+## Step 2: Open PowerShell and Navigate to the Folder
+
+Open **Windows PowerShell as Administrator**, then navigate to your newly created folder using a command like: **cd C:\Users{Your User}\Desktop\VRTFolder**
 
 
-Step 1: Create any folder on your desktop and paste the provided docker-compose.yml and .env file into this directory
+![PowerShell_1](GitImages/2_.PNG)
 
-Step 2: Open Windows PowerShell with administrator and change the running directory to your newly created folder with command like:
- “cd C:\Users\{Your User}\Desktop\VRTFolder”
+---
 
-Step 3: Run command “docker compose up -d” and wait for it to finish running.
-In Docker wait for migrations container to finish running.
-Now VRT should be running on your docker setup! And you can visit it on localhost:8080
+## Step 3: Start Docker Containers
 
-Step 4:
-Register in VRT User Interface using your own email and make sure you can see the projects dashboard
+Run the following command: **docker compose up -d**
 
-Step 5: 
-Open new powershell window and run these commands:
-1)“docker exec -it {containerName} psql -U postgres -d vrt_db”
 
-2)Select id,email,role from “User”;
+Wait for the containers to finish starting. You should see output like this:
 
-3)Update “User” SET role = ‘admin’ where email = ‘your@email.com”
-Now you are an admin with all permissions!
+![VRT_Install_1](GitImages/3.PNG)
+
+![VRT_Install_2](GitImages/4.PNG)
+
+In Docker Desktop, wait for the **migrations** container to finish running.
+
+![Docker_Photo_1](GitImages/5.PNG)
+
+Once complete, VRT should be up and running. You can now access it at: localhost:8080
+
+
+![VRT_Running](GitImages/6.PNG)
+
+---
+
+## Step 4: Register and Access the Dashboard
+
+Register using your email and confirm you can see the **Projects Dashboard**.
+
+---
+
+## Step 5: Gain Admin Access
+
+Open a **new PowerShell window** and run the following commands:
+
+1. Enter the PostgreSQL shell:
+
+   **docker exec -it {containerName} psql -U postgres -d vrt_db**
+
+
+2. Check your user ID and role:
+
+   **SELECT id, email, role FROM "User";**
+
+
+3. Update your role to admin:
+
+   **UPDATE "User" SET role = 'admin' WHERE email = 'your@email.com';**
+
+
+![Postgres_Commands](GitImages/7_.PNG)
+
+---
+
+You now have full admin permissions! 🎉
+
+
+
 
 
 
