@@ -49,36 +49,14 @@ Once complete, VRT should be up and running. You can now access it at: localhost
 
 ---
 
-## Step 4: Register and Access the Dashboard
+## Step 4: Access the dashboard as default admin user
 
-Register using your email and confirm you can see the **Projects Dashboard**.
-
----
-
-## Step 5: Gain Admin Access
-
-Open a **new PowerShell window** and run the following commands:
-
-1. Enter the PostgreSQL shell:
-
-   **docker exec -it {containerName} psql -U postgres -d vrt_db**
-
-
-2. Check your user ID and role:
-
-   **SELECT id, email, role FROM "User";**
-
-
-3. Update your role to admin:
-
-   **UPDATE "User" SET role = 'admin' WHERE email = 'your@email.com';**
-
-
-![Postgres_Commands](GitImages/7_.PNG)
+User: visual-regression-tracker@example.com
+Password: 123456
 
 ---
 
-You now have full admin permissions! 🎉
+Now you are ready to start visual testing! 🎉
 
 
 
