@@ -150,6 +150,31 @@ vrt.track(
 );
 ```
 
+# Challenge Scenario: Visual & File Validation  
+
+### Steps  
+
+1. **Visit Landing Page**  
+   - Open [freetestdata.com](https://freetestdata.com/)  
+   - Perform a **full-page visual validation** of the landing page.  
+
+2. **Navigate to Sample Files**  
+   - Click the **blue "Sample Files"** button (page should scroll to the "Sample Types" section).  
+   - Select **"Document Files"**.  
+   - Perform a **full-page visual validation**.  
+
+3. **Handle PDF Sample Download**  
+   - Click the **"Select File & Download"** button for **PDF** files.  
+   - If an ad pop-up is displayed, **close it**.  
+   - Validate that the **header looks exactly as expected** (only header validation required here).  
+
+4. **Download Specific PDF**  
+   - Click **"Download PDF"** for the **100KB PDF File** (3 pages).  
+   - Capture the downloaded PDF file.  
+   - Validate that the **downloaded PDF file content and structure** look as expected.  
+
+---
+
 ## 🙏 Credits
 
 This setup guide is inspired by and built upon the work of the [Visual Regression Tracker](https://github.com/Visual-Regression-Tracker/Visual-Regression-Tracker) project and its awesome contributors.  
