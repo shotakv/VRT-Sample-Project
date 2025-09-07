@@ -67,7 +67,7 @@ services:
     expose:
       - "${POSTGRES_PORT}"
     volumes:
-      - /home/ubuntu11/postgres_data:/var/lib/postgresql/data
+      - ./db:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -d $$POSTGRES_DB -U $$POSTGRES_USER"]
       interval: 10s
